@@ -105,7 +105,7 @@ public class CoffeeCalculator {
 
     }
 
-    public double calculateBrewRatio (){
+    private double calculateBrewRatio (){
         switch (this.process){
             case 1 -> this.brewRatio = 16.6; // 1 = Washed
             case 2 -> this.brewRatio = 16.6; // 2 = Washed + Ferment
@@ -117,12 +117,12 @@ public class CoffeeCalculator {
         return this.brewRatio;
     } ;
 
-    public double calculateCoffeeDose(){
+    private double calculateCoffeeDose(){
         this.coffeeDose = this.totalWater / this.brewRatio;
         return this.coffeeDose;
     }
 
-    public double [] calculatePours(){
+    private double [] calculatePours(){
         this.bloom = 0.20 * this.totalWater;
          this.firstPour = 0.53 * this.totalWater;
          this.secondPour = 0.80 * this.totalWater;
@@ -131,17 +131,17 @@ public class CoffeeCalculator {
 
     }
 
-    public int calculateTemperature(){
+    private int calculateTemperature(){
             this.temperature = TEMPERATURE_TABLE[this.roastLevel  - 1][this.process - 1];
             return this.temperature;
     }
 
-    public double calculateTotalWater(){
+    private double calculateTotalWater(){
         this.totalWater = this.coffeeDose * this.brewRatio;
         return this.totalWater;
     }
 
-    public double calculateFinalBeverage(){
+    private double calculateFinalBeverage(){
         this.finalBeverage = this.totalWater * 0.867;
         return this.finalBeverage;
     }
