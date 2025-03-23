@@ -52,6 +52,10 @@ Select your coffee **process**, **roast level**, and either the **coffee dose** 
 
 ## 🚀 How to Run
 
+[![Run on Replit](https://replit.com/badge/github/NikosDiakonis/v60-recipe-generator)](https://replit.com/@Nikdiak/v60-recipe-generator)
+ 
+ --OR--
+ 
 Clone the repository:
 
 ```bash
@@ -73,6 +77,6 @@ Based on the pour-over method of mister Sotiris Diamantopoulos, tailored and cus
 
 Feel free to ⭐ the repo if you liked it!
 
-[![Run on Replit](https://replit.com/badge/github/NikosDiakonis/v60-recipe-generator)](https://replit.com/@Nikdiak/v60-recipe-generator)
+
 
 
