@@ -168,7 +168,7 @@ public class CoffeeCalculator {
 
 
     // Factory method γιατι δεν μπορώ να έχω 2 constructor me int int double
-    public static CoffeeCalculator byTotalWater(int process, int roastLevel, double totalWater){
+   /* public static CoffeeCalculator byTotalWater(int process, int roastLevel, double totalWater){
 
         CoffeeCalculator byTotalWater = new CoffeeCalculator(process,roastLevel,totalWater);
         return byTotalWater;
@@ -185,5 +185,6 @@ public class CoffeeCalculator {
      byCoffeeDose.calculatePours();
      byCoffeeDose.calculateTemperature();
      return byCoffeeDose;
-    }
+    }*/
+
 }
