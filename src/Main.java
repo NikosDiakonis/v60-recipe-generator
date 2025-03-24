@@ -40,20 +40,22 @@ public class Main {
             System.out.println("  2️⃣  Final brew water (how much water you want to pour, in ml)");
             System.out.print("\uD83D\uDC49 Enter 1 for grams of coffee or 2 for total brew water: ");
             userRecipeChoice  = validatedIntRangeInput(scanner,1,2,"⚠\uFE0F Invalid input. Choose between 1-2. Please try again ⚠\uFE0F");
-                if(userRecipeChoice == 1){
+
+            CoffeeCalculatorFactory factory = new CoffeeCalculatorFactory();
+            if(userRecipeChoice == 1){
                 System.out.println("\uD83D\uDC49 Please enter your desired coffee dose: ");
                 System.out.println("The coffee dose must be between 10g and 30g");
 
                 userCoffeeDose = validDoubleRangeInput(scanner,10,30,"⚠\uFE0F Invalid input. Please type between 10 to 30 ⚠\uFE0F");
 
-            CoffeeCalculator madeByCoffeeDose = CoffeeCalculator.byCoffeeDose(userProcess,userRoastLevel,userCoffeeDose);
+            CoffeeCalculator madeByCoffeeDose = factory.createdByCoffeeDose(userProcess,userRoastLevel,userCoffeeDose);
             madeByCoffeeDose.showRecipe();
         }else {
             System.out.println("\uD83D\uDCA7 Total Brew Water Selection ");
             System.out.println("\uD83D\uDC49  Please choose between 180ml and 500ml: ");
 
             userTotalWater = validDoubleRangeInput(scanner, 180, 500, "⚠️ Invalid input. Please type between 180 to 500 ⚠️");
-            CoffeeCalculator madeByTotalWater = CoffeeCalculator.byTotalWater(userProcess, userRoastLevel, userTotalWater);
+            CoffeeCalculator madeByTotalWater = factory.createdByTotalWater(userProcess, userRoastLevel, userTotalWater);
             madeByTotalWater.showRecipe();
 
 
