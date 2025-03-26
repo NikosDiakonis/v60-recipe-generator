@@ -27,7 +27,7 @@ public class CoffeeCalculator {
 
 
 
-    public CoffeeCalculator(int process, int roastLevel, double totalWater) {
+    public CoffeeCalculator(int process, int roastLevel) {
         if(process<1 || process>6){
             throw new IllegalArgumentException("Process must be between 1-6");
         }
@@ -35,13 +35,9 @@ public class CoffeeCalculator {
         if(roastLevel<1 || roastLevel>6)
             throw new IllegalArgumentException("Roast Level must be between 1-6");
         this.roastLevel = roastLevel;
-        this.totalWater = totalWater;
-        calculateBrewRatio();
-        calculateCoffeeDose();
-        calculateFinalBeverage();
-        calculatePours();
-        calculateTemperature();
     }
+
+
 
     public double getFinalBeverage() {
         return finalBeverage;
@@ -117,10 +113,10 @@ public class CoffeeCalculator {
         return this.brewRatio;
     } ;
 
-    public double calculateCoffeeDose(){
-        this.coffeeDose = this.totalWater / this.brewRatio;
-        return this.coffeeDose;
-    }
+//    public double calculateCoffeeDose(){
+//        this.coffeeDose = this.totalWater / this.brewRatio;
+//        return this.coffeeDose;
+//    }
 
     public double [] calculatePours(){
         this.bloom = 0.20 * this.totalWater;
@@ -136,10 +132,10 @@ public class CoffeeCalculator {
             return this.temperature;
     }
 
-    public double calculateTotalWater(){
-        this.totalWater = this.coffeeDose * this.brewRatio;
-        return this.totalWater;
-    }
+//    public double calculateTotalWater(){
+//        this.totalWater = this.coffeeDose * this.brewRatio;
+//        return this.totalWater;
+//    }
 
     public double calculateFinalBeverage(){
         this.finalBeverage = this.totalWater * 0.867;
